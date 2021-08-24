@@ -90,10 +90,13 @@
     }
 
     .win {
-      color: red;
+      color: darkgoldenrod;
       font-weight: bolder;
       text-align: center;
       font-size: calc(3.5rem + 3.5vmin);
+    }
+    .onActive {
+      display: none;
     }
 
     /*Элементы игрового поля*/
@@ -120,6 +123,14 @@
       transition: all 0.2s ease-in-out;
     }
 
+    #mixItUpBtn {
+      padding: 10px;
+      border:2px solid goldenrod;
+      border-radius: 30px;
+      font-size: calc(1rem + 1vmin);
+      background: dimgrey;
+    }
+
     @media screen and (max-width: 767px) and (orientation: landscape) {
       html, body {
         font-size: 12px;
@@ -133,38 +144,23 @@
       p {
         font-size: calc(1rem + 1vmin);
       }
-
     }
 
     @media (max-width: 480px) {
       html, body {
-        font-size: 12px;
+        font-size: 25%;
       }
     }
+
   </style>
 </head>
 <body>
+<div id="winModal" class="win onActive">ПОБЕДА!</div>
 <h1>Игра Пятнашки</h1>
 <div class="field">
-  <div id="elem1" class="active">15</div>
-  <div id="elem2" class="active">14</div>
-  <div id="elem3" class="active">13</div>
-  <div id="elem4" class="active">12</div>
-  <div id="elem5" class="active">11</div>
-  <div id="elem6" class="active">10</div>
-  <div id="elem7" class="active">9</div>
-  <div id="elem8" class="active">8</div>
-  <div id="elem9" class="active">7</div>
-  <div id="elem10" class="active">6</div>
-  <div id="elem11" class="active">5</div>
-  <div id="elem12" class="active">4</div>
-  <div id="elem13" class="active">3</div>
-  <div id="elem14" class="active">2</div>
-  <div id="elem15" class="active">1</div>
-  <div id="elem16" class=""></div>
 </div>
 <p>Ход: <span id="tour">0</span></p>
-<div id="mixItUp"><button id="mixItUpBtn">Перемешать</button></div>
+<button id="mixItUpBtn">Перемешать</button>
 <script src="js/main.min.js"></script>
 
 </body>
