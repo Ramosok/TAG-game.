@@ -8,11 +8,6 @@ mixItUpBtn.addEventListener('click',()=> {
   window.location.reload(true);
 });
 
-function vvv() {
-  winModal.classList.remove('onActive');
-  shuffle()
-}
-
 const arr = [];
 for (let i = 1; i <= 16; i++) {
   arr.push(i);
@@ -48,6 +43,9 @@ const vArr = '15 14 13 12 11 10 9 8 7 6 5 4 3 2 1'
 
 function victory() {
   const active = document.querySelectorAll('.active');
+  /*active.forEach(item => {item.innerHTML
+    console.log(item.innerHTML)});*/
+  //
   let arrInnerHtml = [active[0].innerHTML, active[1].innerHTML, active[2].innerHTML, active[3].innerHTML, active[4].innerHTML, active[5].innerHTML, active[6].innerHTML, active[7].innerHTML, active[8].innerHTML, active[9].innerHTML, active[10].innerHTML,
     active[11].innerHTML, active[12].innerHTML, active[13].innerHTML, active[14].innerHTML,];
   if (vArr === arrInnerHtml.join(' ')) {
